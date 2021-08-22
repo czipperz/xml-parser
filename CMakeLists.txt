@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.3)
 
-# TODO: rename me!
-project(MYPROJECT)
+project(xml-parser)
 
 # Force c++11.
 set(CMAKE_CXX_STANDARD 11)
@@ -16,7 +15,7 @@ set(TEST_PROGRAM_NAME ${PROJECT_NAME}-test)
 # target_link_libraries(${PROGRAM_NAME} ${LIBRARY_NAME} cz tracy)
 
 # Add test program.
-if (MYPROJECT_BUILD_TESTS)
+if (XML_PARSER_BUILD_TESTS)
     file(GLOB_RECURSE TEST_SRCS tests/*.cpp)
     add_executable(${TEST_PROGRAM_NAME} ${TEST_SRCS})
     target_include_directories(${TEST_PROGRAM_NAME} PUBLIC src cz/test_base)

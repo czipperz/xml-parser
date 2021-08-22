@@ -1,49 +1,37 @@
-# MYPROJECT
+# xml-parser
 
-This repository provides a base project for C++ projects.
+A super basic XML parser.  Built it to make sure the base project works but also for fun.
 
-It is licensed under the MIT license so you may use any license in the project you create.
-
-Features:
-* CMake build script.
-* cz and Tracy integration.
-* GNU Global tag generation.
-* Build scripts (debug, release, release-debug, tracy).
-* Catch2 tests.
-
-Getting started:
-1. Clone the repository by following step 1 of [Building](#Building).
-2. Change all instances of `MYPROJECTURL` with the url of your project.
-3. Change all instances of `MYPROJECT` with the name of your project.
-4. Delete this part of the readme.
+Tokenizes the XML document into a series of tokens.
+It is trivial to take this stream and turn it into a tree.
 
 ## Building
 
 1. Clone the repository and the submodules.
 
 ```
-git clone MYPROJECTURL
-cd MYPROJECT
+git clone https://github.com/czipperz/xml-parser
+cd xml-parser
 git submodule init
 git submodule update
 ```
 
-2. Build MYPROJECT by running (on all platforms):
+2. Build xml-parser by running (on all platforms):
 
 ```
 ./build-release
 ```
 
-3. After building, MYPROJECT can be ran via `./build/release/MYPROJECT`.
+3. After building, xml-parser can be ran via `./build/release/xml-parser`.
 
 ## Optimizing
-We use Tracy to optimize MYPROJECT.  See the
+We use Tracy to optimize xml-parser.  See the
 [manual](https://bitbucket.com/wolfpld/tracy/downloads/tracy.pdf) for more information.
 
-To prepare we have to build MYPROJECT with Tracy enabled and also build Tracy's
-profiler.  Once both are built, we then run the profiler and MYPROJECT at the same time.
+To prepare we have to build xml-parser with Tracy enabled and also build Tracy's
+profiler.  Once both are built, we then run the profiler and xml-parser at the same time.
 
-Build MYPROJECT with Tracy enabled:
+Build xml-parser with Tracy enabled:
 ```
 ./build-tracy
 ```
@@ -59,8 +47,8 @@ Then we run Tracy:
 ./tracy/profiler/build/unix/Tracy-release
 ```
 
-Then run MYPROJECT with Tracy enabled.  Run it as the
+Then run xml-parser with Tracy enabled.  Run it as the
 super user to enable context switching recognition.
 ```
-sudo ./build/tracy/MYPROJECT
+sudo ./build/tracy/xml-parser
 ```
