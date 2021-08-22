@@ -7,13 +7,13 @@ project(MYPROJECT)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(PROGRAM_NAME ${PROJECT_NAME})
-set(LIBRARY_NAME ${PROJECT_NAME}-lib)
+# set(PROGRAM_NAME ${PROJECT_NAME})
+set(LIBRARY_NAME ${PROJECT_NAME})
 set(TEST_PROGRAM_NAME ${PROJECT_NAME}-test)
 
 # Build wrapper executable.
-add_executable(${PROGRAM_NAME} main.cpp)
-target_link_libraries(${PROGRAM_NAME} ${LIBRARY_NAME} cz tracy)
+# add_executable(${PROGRAM_NAME} main.cpp)
+# target_link_libraries(${PROGRAM_NAME} ${LIBRARY_NAME} cz tracy)
 
 # Add test program.
 if (MYPROJECT_BUILD_TESTS)
